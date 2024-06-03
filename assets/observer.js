@@ -1,17 +1,20 @@
-const observer = new IntersectionObserver((items) => {
-    items.forEach(item => {
-        if (item.isIntersecting) {
-            item.target.classList.add('in-view');
-        }
+window.onload = () => {
+    const observer = new IntersectionObserver((items) => {
+        items.forEach(item => {
+            if (item.isIntersecting) {
+                item.target.classList.add('in_view');
+                item.target.classList.remove('not_in_view');
+            };
+        });
+    }, {
+        rootMargin: '0px',
+        threshold: [0, 0.1, 1],
+    },
+    );
+
+    const blocks = document.querySelectorAll('.container');
+    blocks.forEach(block => {
+        block.classList.add('not_in_view');
+        observer.observe(block);
     });
-}, {
-    rootMargin: '0px',
-    threshold: [0, 0.1, 1],
-},
-);
-
-const tags = document.querySelectorAll('.container');
-
-tags.forEach(tag => {
-    observer.observe(tag);
-});
+};

@@ -33,8 +33,12 @@
     max-width: 900px;
   }
   
-  .container.in-view {
+  .container.in_view {
     animation: fade 0.7s 0.7s both;
+  }
+
+  .container.in_view {
+    opacity: 0;
   }
 
   .fh {
