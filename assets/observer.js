@@ -2,7 +2,7 @@ const observer = new IntersectionObserver((items) => {
     items.forEach(item => {
         if (item.isIntersecting) {
             item.target.classList.add('in-view');
-        };
+        }
     });
 }, {
     rootMargin: '0px',
@@ -12,6 +12,6 @@ const observer = new IntersectionObserver((items) => {
 
 const tags = document.querySelectorAll('.container');
 
-tags.forEach(() => {
-    observer.observe(tags);
+tags.forEach(tag => {
+    observer.observe(tag);
 });
