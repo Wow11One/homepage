@@ -62,6 +62,12 @@
     padding-bottom: 30px;
     margin-bottom: 15px;
   }
+
+  .joke__block {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+  }
   
   @media screen and (max-width: 576px) {
     .main-info,
@@ -170,8 +176,19 @@
     color: var(--secondary-text-color);
     text-align: justify;
   }
+
+  .joke_text {
+    color: var(--secondary-text-color);
+    text-align: justify;
+  }
   
   .skills__header {
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .joke__header {
     color: var(--secondary-text-color);
     text-align: center;
     margin-bottom: 15px;
